@@ -1,0 +1,13 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tau2-workshop-core"
+version = "0.1.0"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = ["pydantic>=2", "loguru", "python-dotenv", "deepdiff>=8.4.2", "addict>=2.4", "docstring-parser>=0.16", "toml>=0.10", "PyYAML>=6", "typing-extensions"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tau2"]

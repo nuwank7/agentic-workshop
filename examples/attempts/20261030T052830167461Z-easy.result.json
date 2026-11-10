@@ -1,0 +1,44 @@
+{
+  "seq": 25,
+  "time": "2026-10-30T05:29:44.903747+00:00",
+  "event": "result",
+  "task": "easy",
+  "outcome": "error",
+  "termination": "error",
+  "checks": [
+    {
+      "check": "assert_mobile_data_status",
+      "arguments": {
+        "expected_status": true
+      },
+      "passed": false
+    },
+    {
+      "check": "assert_internet_speed",
+      "arguments": {
+        "expected_speed": 200,
+        "expected_desc": "excellent"
+      },
+      "passed": false
+    },
+    {
+      "check": "assert_airplane_mode_status",
+      "arguments": {
+        "expected_status": false
+      },
+      "passed": false
+    },
+    {
+      "check": "assert_service_status",
+      "arguments": {
+        "expected_status": "connected"
+      },
+      "passed": false
+    }
+  ],
+  "error": "OpenAIRateLimitError: Error code: 429 - Provider returned error",
+  "seconds": 74.67,
+  "model_calls": 11,
+  "reported_cost": 0.0,
+  "cost_reports": 11
+}

@@ -1,0 +1,44 @@
+{
+  "seq": 51,
+  "time": "2026-11-02T11:30:30.056867+00:00",
+  "event": "result",
+  "task": "easy",
+  "outcome": "pass",
+  "termination": "turn_limit",
+  "checks": [
+    {
+      "check": "assert_mobile_data_status",
+      "arguments": {
+        "expected_status": true
+      },
+      "passed": true
+    },
+    {
+      "check": "assert_internet_speed",
+      "arguments": {
+        "expected_speed": 200,
+        "expected_desc": "excellent"
+      },
+      "passed": true
+    },
+    {
+      "check": "assert_airplane_mode_status",
+      "arguments": {
+        "expected_status": false
+      },
+      "passed": true
+    },
+    {
+      "check": "assert_service_status",
+      "arguments": {
+        "expected_status": "connected"
+      },
+      "passed": true
+    }
+  ],
+  "error": null,
+  "seconds": 102.7,
+  "model_calls": 19,
+  "reported_cost": 0.0,
+  "cost_reports": 19
+}

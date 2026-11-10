@@ -1,0 +1,67 @@
+{
+  "seq": 27,
+  "time": "2026-10-30T06:21:45.229261+00:00",
+  "event": "result",
+  "task": "hard-both",
+  "outcome": "fail",
+  "termination": "user_left",
+  "checks": [
+    {
+      "check": "assert_mobile_data_status",
+      "arguments": {
+        "expected_status": true
+      },
+      "passed": false
+    },
+    {
+      "check": "assert_internet_speed",
+      "arguments": {
+        "expected_speed": 200,
+        "expected_desc": "excellent"
+      },
+      "passed": false
+    },
+    {
+      "check": "assert_data_refueling_amount",
+      "arguments": {
+        "customer_id": "C1001",
+        "line_id": "L1002",
+        "expected_amount": 2.0
+      },
+      "passed": false
+    },
+    {
+      "check": "assert_airplane_mode_status",
+      "arguments": {
+        "expected_status": false
+      },
+      "passed": false
+    },
+    {
+      "check": "assert_service_status",
+      "arguments": {
+        "expected_status": "connected"
+      },
+      "passed": false
+    },
+    {
+      "check": "assert_mobile_data_saver_mode_status",
+      "arguments": {
+        "expected_status": false
+      },
+      "passed": false
+    },
+    {
+      "check": "assert_mobile_data_usage_exceeded",
+      "arguments": {
+        "expected_status": false
+      },
+      "passed": false
+    }
+  ],
+  "error": null,
+  "seconds": 175.08,
+  "model_calls": 7,
+  "reported_cost": 0.0,
+  "cost_reports": 7
+}

@@ -1,0 +1,44 @@
+{
+  "seq": 73,
+  "time": "2026-10-30T05:53:17.364215+00:00",
+  "event": "result",
+  "task": "easy",
+  "outcome": "error",
+  "termination": "interrupted",
+  "checks": [
+    {
+      "check": "assert_mobile_data_status",
+      "arguments": {
+        "expected_status": true
+      },
+      "passed": false
+    },
+    {
+      "check": "assert_internet_speed",
+      "arguments": {
+        "expected_speed": 200,
+        "expected_desc": "excellent"
+      },
+      "passed": false
+    },
+    {
+      "check": "assert_airplane_mode_status",
+      "arguments": {
+        "expected_status": false
+      },
+      "passed": false
+    },
+    {
+      "check": "assert_service_status",
+      "arguments": {
+        "expected_status": "connected"
+      },
+      "passed": false
+    }
+  ],
+  "error": "Run interrupted; this is not a scored task failure.",
+  "seconds": 231.79,
+  "model_calls": 28,
+  "reported_cost": 0.0,
+  "cost_reports": 28
+}

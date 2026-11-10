@@ -1,0 +1,5 @@
+# Keep LF line endings on every OS. The example recordings are verified by
+# SHA-256, so Windows CRLF conversion would make scripts/verify_examples.py fail.
+* text=auto eol=lf
+*.jsonl -text
+*.json -text

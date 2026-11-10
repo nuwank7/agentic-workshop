@@ -1,0 +1,74 @@
+{
+  "recorded_on": "2026-11-02",
+  "description": "Selected runtime validation recordings from successive fixes, not a controlled comparison or replacement for the original baselines. ERROR checks are diagnostic only. Raw files are copied unchanged.",
+  "runs": [
+    {
+      "task": "easy",
+      "trace": "20261102T112847272297Z-easy.jsonl",
+      "config": "20261102T112847272297Z-easy.config.json",
+      "result": "20261102T112847272297Z-easy.result.json",
+      "outcome": "pass",
+      "termination": "turn_limit",
+      "checks_passed": 4,
+      "checks_total": 4,
+      "model_calls": 19,
+      "notes": "Four-turn role-guard smoke run; all native checks passed at the explicit cap. Predates response recovery and removal of the default conversation cap.",
+      "sha256": {
+        "20261102T112847272297Z-easy.jsonl": "adcfe9769a0908010da34adfdd9dba11fb5ed3a35d6af77dea25dd1d2c3ba8fd",
+        "20261102T112847272297Z-easy.config.json": "7071e9356d306b92363a12521a84281aabd184122cfec443fc66ef35dcf10614",
+        "20261102T112847272297Z-easy.result.json": "da12519c6ece0d79db82ff6c80dfb80e2ddeebf08c68dfeb3a6834201b095f58"
+      }
+    },
+    {
+      "task": "hard-user",
+      "trace": "20261102T135949684278Z-hard-user.jsonl",
+      "config": "20261102T135949684278Z-hard-user.config.json",
+      "result": "20261102T135949684278Z-hard-user.result.json",
+      "outcome": "pass",
+      "termination": "user_stop",
+      "checks_passed": 4,
+      "checks_total": 4,
+      "model_calls": 27,
+      "notes": "No conversation cap. Customer stopped after nine turns; all native checks passed.",
+      "sha256": {
+        "20261102T135949684278Z-hard-user.jsonl": "c0c67a1aa28c6bf9ea086accd18839d8c8fedb68742b40cecae00eb22327f0f3",
+        "20261102T135949684278Z-hard-user.config.json": "bb45f3a0761b977c944a391358679e47b83eb6ca620431596b2492a87c6ad126",
+        "20261102T135949684278Z-hard-user.result.json": "21c46cf4576b3bfade2c13a1887a04bb77794277a43138e644cd76cc1c5d4bfc"
+      }
+    },
+    {
+      "task": "hard-env",
+      "trace": "20261102T133328141097Z-hard-env.jsonl",
+      "config": "20261102T133328141097Z-hard-env.config.json",
+      "result": "20261102T133328141097Z-hard-env.result.json",
+      "outcome": "fail",
+      "termination": "tool_step_limit",
+      "checks_passed": 6,
+      "checks_total": 7,
+      "model_calls": 39,
+      "notes": "Reached the per-speaker tool-step limit after repeated refuels; exact 2 GB refuel check failed. Used a 12-turn cap, but did not reach it. Predates the final small wording refinement to customer repair instructions.",
+      "sha256": {
+        "20261102T133328141097Z-hard-env.jsonl": "3706f113d268110639f01015d0128a07d6460a90f697f9bbadee10b4fff06652",
+        "20261102T133328141097Z-hard-env.config.json": "11a246ff595f8544d32d808163dc94a84333b0cf6cbb5c348bdff509255c6894",
+        "20261102T133328141097Z-hard-env.result.json": "3aeea4d4dad1c379b7755b4f25b309dd6d0012df35b19e53c2d6350fe8c5c132"
+      }
+    },
+    {
+      "task": "hard-both",
+      "trace": "20261102T140252348106Z-hard-both.jsonl",
+      "config": "20261102T140252348106Z-hard-both.config.json",
+      "result": "20261102T140252348106Z-hard-both.result.json",
+      "outcome": "error",
+      "termination": "error",
+      "checks_passed": 5,
+      "checks_total": 7,
+      "model_calls": 56,
+      "notes": "No conversation cap. Completed thirteen dialogue turns, then response recovery exhausted after an unavailable or completed tool request. ERROR, not a scored task failure. Speed and exact-refuel checks were false in the recorded state.",
+      "sha256": {
+        "20261102T140252348106Z-hard-both.jsonl": "8917579bea2dd19685f9af800f0387a2692acc7a0d0d1566e80a34b68bd282e8",
+        "20261102T140252348106Z-hard-both.config.json": "2f288d2725fc13c150ac4b90f5ff053693255910e5860a81ac6b084172a0cd72",
+        "20261102T140252348106Z-hard-both.result.json": "c924aa1392d0f87e8c30da3ff20ce1a0c77ee7e2859b7b7145c1813407a1c88b"
+      }
+    }
+  ]
+}

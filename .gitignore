@@ -1,0 +1,21 @@
+# Secrets: copy .env.example to .env and add your own key
+.env
+.env.*
+!.env.example
+
+# Python / uv
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Your local workshop output
+logs/
+runs/
+
+# OS / editor clutter
+.DS_Store
+.idea/
+.vscode/

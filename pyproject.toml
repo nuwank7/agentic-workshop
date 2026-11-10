@@ -1,0 +1,17 @@
+[project]
+name = "icter-workshop"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain>=1.4.7",
+    "langgraph>=1.2.18",
+    "loguru>=0.7.3",
+    "python-dotenv>=1.2.4",
+    "rich>=15.0.0",
+    "typer>=0.27.3",
+    "tau2-workshop-core",
+    "langchain-anthropic>=1.0",
+]
+
+[tool.uv.sources]
+tau2-workshop-core = { path = "vendor/tau2-core", editable = true }

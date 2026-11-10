@@ -1,0 +1,67 @@
+{
+  "seq": 66,
+  "time": "2026-10-30T06:14:02.683024+00:00",
+  "event": "result",
+  "task": "hard-both",
+  "outcome": "error",
+  "termination": "error",
+  "checks": [
+    {
+      "check": "assert_mobile_data_status",
+      "arguments": {
+        "expected_status": true
+      },
+      "passed": false
+    },
+    {
+      "check": "assert_internet_speed",
+      "arguments": {
+        "expected_speed": 200,
+        "expected_desc": "excellent"
+      },
+      "passed": false
+    },
+    {
+      "check": "assert_data_refueling_amount",
+      "arguments": {
+        "customer_id": "C1001",
+        "line_id": "L1002",
+        "expected_amount": 2.0
+      },
+      "passed": false
+    },
+    {
+      "check": "assert_airplane_mode_status",
+      "arguments": {
+        "expected_status": false
+      },
+      "passed": true
+    },
+    {
+      "check": "assert_service_status",
+      "arguments": {
+        "expected_status": "connected"
+      },
+      "passed": true
+    },
+    {
+      "check": "assert_mobile_data_saver_mode_status",
+      "arguments": {
+        "expected_status": false
+      },
+      "passed": true
+    },
+    {
+      "check": "assert_mobile_data_usage_exceeded",
+      "arguments": {
+        "expected_status": false
+      },
+      "passed": false
+    }
+  ],
+  "error": "RuntimeError: Customer emitted raw tool-call markup; invalid model protocol, not a task failure.",
+  "seconds": 244.91,
+  "model_calls": 25,
+  "reported_cost": 0.0,
+  "cost_reports": 25
+}
