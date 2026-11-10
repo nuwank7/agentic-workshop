@@ -26,6 +26,18 @@ can see how context and tool design change the result.
 
 ## Setup
 
+**Install uv first.** The commands below need [uv](https://docs.astral.sh/uv/).
+Follow the steps for your system further down ([macOS](#macos), [Linux](#linux),
+[Windows with WSL](#windows-with-wsl-recommended) or
+[Windows without WSL](#windows-without-wsl)), reopen the terminal, and check that
+it works:
+
+```bash
+uv --version
+```
+
+Then, from the repository folder, install the dependencies and create your `.env`:
+
 ```bash
 uv sync
 cp .env.example .env     # then add your ANTHROPIC_API_KEY
