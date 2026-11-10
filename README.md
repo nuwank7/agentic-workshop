@@ -38,6 +38,47 @@ Open `.env` and replace `your-key-here` with the key you created in
 ANTHROPIC_API_KEY=your-key-here
 ```
 
+### macOS
+
+1. Install the Apple command-line tools (they include Git) if you have not
+   already: `xcode-select --install`.
+2. Install uv with [Homebrew](https://brew.sh) or the official installer, then
+   close and reopen Terminal:
+
+   ```bash
+   brew install uv
+   # or, without Homebrew:
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   ```
+
+   uv downloads Python 3.12 for you if it is missing.
+
+3. Clone the repository, then run the setup commands above.
+4. Edit `.env` with `nano .env` or `open -e .env` (TextEdit). Finder hides files
+   that start with a dot; press `Cmd+Shift+.` to show them.
+
+Terminal or iTerm2 both work. For `showprogress.py --follow`, open a second tab
+(`Cmd+T`) in the same folder.
+
+### Linux
+
+1. Install Git and curl with your package manager, for example
+   `sudo apt install git curl` (Debian/Ubuntu) or `sudo dnf install git curl`
+   (Fedora).
+2. Install uv, then close and reopen the terminal:
+
+   ```bash
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   ```
+
+   uv downloads Python 3.12 for you if it is missing.
+
+3. Clone the repository, then run the setup commands above.
+4. Edit `.env` with `nano .env` or any text editor (use `ls -a` to see it).
+
+For `showprogress.py --follow`, open a second terminal window or tab in the
+same folder.
+
 ### Windows with WSL (recommended)
 
 If you have WSL (Ubuntu) installed, use it: inside WSL the Mac/Linux steps
